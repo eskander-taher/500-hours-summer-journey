@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="data:image/png;base64,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">
+    <title>HTML</title>
+</head>
+<body>
+    <p style="font-size: 200%;text-align: center;"><b>1- Headings</b></p>
+
+    <!-- headings -->
+    <h1>Hello World!</h1>
+    <h2>Hello World!</h2>
+    <h3>Hello World!</h3>
+    <h4>Hello World!</h4>
+    <h5>Hello World!</h5>
+    <h6>Hello World!</h6>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>2- hr tag with paragraphs</b></p>
+    <h1>This is heading 1</h1>
+    <p>this is paragraph 1</p>
+    <hr>
+    <h1>This is heading 2</h1>
+    <p>this is paragraph 2</p>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>3- br tag with paragraphs</b></p>
+    <p>this is a paragraph that <br> is broke with br break tag</p>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>4- pre tag(preformatted text)</b></p>
+    <pre>
+        this is a text that is preformatted
+        I can add speces and new lines without the help of br tags
+        or any other tags               like this space
+        
+
+        or these two new lines, which is awesome
+    </pre>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>5- style attribute and some properties</b></p>
+    <p style="background-color: yellow;">this is a text to be styled: background-color</p>
+    <p style="color: red;">this is a text to be styled: text color</p>
+    <p style="font-size: 200%;">this is a text to be styled: font size</p>
+    <p style="font-family: Arial;">this is a text to be styled: font family</p>
+    <p style="text-align: center;">this is a text to be styled: text align</p>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>6- Formatting tags</b></p>
+    <p><b>text to be formated</b>: bold</p>
+    <p><strong>text to be formated</strong>: strong</p>
+    <p><i>text to be formated</i>: italic</p>
+    <p><em>text to be formated</em>: emphysize</p>
+    <p><mark>text to be formated</mark>: marked text</p>
+    <p><small>text to be formated</small>: small text</p>
+    <p><del>text to be formated</del>: deleted text</p>
+    <p><ins>text to be formated</ins>: inserted text</p>
+    <p>text to be formated <sub>word</sub>: subscript text</p>
+    <p>text to be formated <sup>word</sup>: superscript text</p>
+    <hr>
+
+
+    <p style="font-size: 200%;text-align: center;"><b>7- Quotation tags</b></p>
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 50 years, WWF has been protecting the future of nature.
+    The world's leading conservation organization,
+    WWF works in 100 countries and is supported by
+    1.2 million members in the United States and
+    close to 5 million globally.
+    </blockquote>
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+    <p>the <abbr title="World health organization">WHO</abbr> was founded in 1948</p>
+    <address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address>
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>8- links</b></p>
+    <p><a href="https://github.com/eskander-taher">my GitHub page</a>defualt: _self: it will open in the same page</p>
+    <p><a href="https://github.com/eskander-taher" target="_blank">my GitHub page</a>_blank it will open in other page</p>
+    <hr>
+    
+    <p style="font-size: 200%;text-align: center;"><b>9- images</b></p>
+    <img src="https://i.ytimg.com/vi/BUNC_sKn9dM/maxresdefault.jpg" alt="dog setting" width="500px">
+    <hr>
+    
+    <p style="font-size: 200%;text-align: center;"><b>10- tables</b></p>
+    <style>
+        table, th, td {
+        border:1px solid black;
+    }
+    </style>
+    <table>
+        <tr>
+            <th>First column</th>
+            <th>second column</th>
+            <th>third column</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <hr>
+    
+    <p style="font-size: 200%;text-align: center;"><b>11- lists</b></p>
+    <p>ordered list</p>
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ol>
+    <p>unordered list</p>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <hr>
+    
+    
+    <p style="font-size: 200%;text-align: center;"><b>12- iframes</b></p>
+    <iframe src="iframe.html"></iframe>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>13- forms part 1 - types of imput</b></p>
+    <form action="#">
+        <label for="button">button</label>
+        <input type="button" id="button" name="button" value="button">
+        <br>
+        
+        <label for="checkbox">checkbox1</label>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <br>
+        <label for="checkbox">checkbox2</label>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <br>
+        <label for="checkbox">checkbox3</label>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <br>
+        
+        <label for="color">color</label>
+        <input type="color" id="color" name="color">
+        <br>
+        
+        <label for="date">date</label>
+        <input type="date" id="date" name="date">
+        <br>
+        
+        <label for="datetime-local">datetime-local</label>
+        <input type="datetime-local" id="datetime-local" name="datetime-local">
+        <br>
+        
+        <label for="email">email</label>
+        <input type="email" id="email" name="email">
+        <br>
+        
+        <label for="file">file</label>
+        <input type="file" id="file" name="file">
+        <br>
+        
+        <label for="hidden">hidden</label>
+        <input type="hidden" id="hidden" name="hidden">
+        <br>
+        
+        <label for="image">image</label>
+        <input type="image" id="image" name="image">
+        <br>
+        
+        <label for="month">month</label>
+        <input type="month" id="month" name="month">
+        <br>
+        
+        <label for="number">number</label>
+        <input type="number" id="number" name="number">
+        <br>
+        
+        <label for="password">password</label>
+        <input type="password" id="password" name="password">
+        <br>
+        
+        <fieldset style="border: none; padding: 0px;">
+            <label for="radio">radio</label>
+            <input type="radio" id="radio" name="radio">
+            <br>
+            <label for="radio">radio</label>
+            <input type="radio" id="radio" name="radio">
+            <br>
+            <label for="radio">radio</label>
+            <input type="radio" id="radio" name="radio">
+            <br>
+            <br>
+        </fieldset>
+        
+        <fieldset style="border: none; padding: 0px;">
+            <label for="radio">radio</label>
+            <input type="radio" id="radio" name="radio">
+            <br>
+            <label for="radio">radio</label>
+            <input type="radio" id="radio" name="radio">
+            <br>
+            <label for="radio">radio</label>
+            <input type="radio" id="radio" name="radio">
+            <br>
+            <br>
+        </fieldset>
+
+        
+        
+        <label for="range">range</label>
+        <input type="range" id="range" name="range">
+        <br>
+        
+        <label for="reset">reset</label>
+        <input type="reset" id="range" name="range">
+        <br>
+        
+        <label for="search">search</label>
+        <input type="search" id="search" name="search">
+        <br>
+        
+        <label for="submit">submit</label>
+        <input type="submit" id="submit" name="submit">
+        <br>
+        
+        <label for="tel">tel</label>
+        <input type="tel" id="tel" name="tel">
+        <br>
+        
+        <label for="text">text</label>
+        <input type="text" id="text" name="text">
+        <br>
+
+        
+        <label for="time">time</label>
+        <input type="time" id="time" name="time">
+        <br>
+        
+        <label for="url">url</label>
+        <input type="url" id="url" name="url">
+        <br>
+        
+        <label for="week">week</label>
+        <input type="week" id="week" name="week">
+    </form>
+    <hr>
+
+    <p style="font-size: 200%;text-align: center;"><b>13- forms part 2 - other form elements</b></p>
+    <form action="#">
+        <label for="text">text area</label>
+        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+        <br>
+
+        <fieldset>
+            <legend>selection</legend>
+            <label for="select">select</label>
+            <select name="select" id="select">
+                <option value="car1">car1</option>
+                <option value="car2">car2</option>
+                <option value="car3">car3</option>
+            </select>
+        </fieldset>
+    </form>
+</body>
+</html>
